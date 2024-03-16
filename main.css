@@ -1,0 +1,683 @@
+* {
+  height: 100%;
+  margin: 0;
+  font-family: "Comic Sans MS", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  overflow: hidden;
+  position: relative;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#numbers {
+  height: auto;
+  z-index: 99;
+  font-size: 35px;
+  position: absolute;
+  color: var(--number-color);
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--button-reverse-white);
+  border: 1px solid var(--button-reverse-black);
+  box-shadow: 0px 0px 0px 1px #eee inset;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--button-reverse-black);
+}
+
+body {
+  --number-color: #846a20;
+  --text-dark: black;
+  --bg-grey-light: #ffe4c4;
+  --bg: repeating-linear-gradient(
+    to right,
+    #ffe4c4,
+    #ffe4c4 20px,
+    #fff8dc 20px,
+    #fff8dc 40px
+  );
+  --bg-white: #ffffff;
+  background: var(--bg);
+  --button-reverse-white: #ffe4c4;
+  --button-reverse-black: #35363a;
+  --border-color: #35363a;
+  --button-active: BurlyWood;
+  --upgrade-active: #f9cb90;
+  --color-price: MediumSeaGreen;
+  --bdoftext: #ffffff;
+  --bdoftext: rgba(222, 184, 135, 0.4);
+}
+
+.dark {
+  --number-color: #1a153f;
+  --border-color: #ffe4c4;
+  --text-dark: #ffe4c4;
+  --bg-grey-light: #35363a;
+  --upgrade-active: #477c7c;
+  --bg: repeating-linear-gradient(
+    to right,
+    #35363a,
+    #35363a 20px,
+    #3c3e49 20px,
+    #3c3e49 40px
+  );
+  --bg-white: #22395d;
+  background-color: var(--bg);
+  --button-reverse-black: #ffe4c4;
+  --button-reverse-white: #35363a;
+  --button-active: DarkSlateGrey;
+  --color-price: MediumSeaGreen;
+  --bdoftext: black;
+  --bdoftext: rgba(0, 0, 0, 0.4);
+}
+
+.page-wrapper {
+  display: flex;
+  height: 97%;
+}
+
+.left-panel-wrapper, .right-panel-wrapper {
+  height: 100%;
+  width: 32%;
+  text-align: center;
+  font-size: 35px;
+}
+
+.content-wrapper {
+  width: 36%;
+  text-align: center;
+}
+
+#countofcoins {
+  font-size: 35px;
+  height: 50px;
+  color: var(--text-dark);
+  background: var(--bdoftext);
+  background: var(--bdoftext);
+}
+
+#kowelek {
+  font-size: 35px;
+  margin-top: 40px;
+  height: 50px;
+  color: var(--text-dark);
+  background: var(--bdoftext);
+  background: var(--bdoftext);
+}
+
+#coin {
+  width: 70%;
+  height: 65%;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: url("images/coins.png");
+  background-size: contain;
+  cursor: pointer;
+}
+
+#shop {
+  height: 40px;
+  width: 100%;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+#upgradesname, #achievementname  {
+  height: 50px;
+  width: 100%;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+#coin {
+  transition: all 0.25s ease-in-out;
+}
+
+#coin:hover {
+  transform: scale(1.05);
+}
+
+#coin:active {
+  transform: scale(0.99);
+}
+
+#btn-group button {
+  cursor: pointer;
+  height: 100%;
+}
+
+#content {
+  height: 75%;
+  width: 100%;
+}
+
+#btn-group {
+  height: 5%;
+}
+
+.firststolb {
+  text-align: -webkit-center;
+}
+
+.derevo {
+  width: 15px;
+  height: 100%;
+}
+
+#buttonsbuy {
+  overflow-y: scroll;
+  height: 79%;
+}
+
+#buttonPrestige {
+  width: 50%;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--bdoftext);
+  color: var(--text-dark);
+}
+
+.buttonbuy {
+  margin-top: 10px;
+  height: 11%;
+  width: 96%;
+  background-color: var(--button-active);
+  color: var(--text-dark);
+  cursor: pointer;
+  border-radius: 20px;
+  border-color: var(--text-dark);
+  transition: all 0.2s ease-in-out;
+}
+
+.buttonbuy:hover {
+  transform: scale(1.04);
+}
+
+.buttonbuy:active {
+  transform: scale(0.99);
+}
+
+.buttonbuy:disabled {
+  background-color: var(--bg-grey-light);
+  cursor: not-allowed;
+}
+
+#firstbuy {
+  width: 95%;
+}
+
+.imgfirst {
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+
+.name,
+.price,
+.pricebuttonbuild {
+  float: left;
+  text-align: left;
+}
+
+.price {
+  width: 21%;
+}
+
+.pricebuttonbuild {
+  text-transform: none;
+  margin-left: -45px;
+}
+
+.price,
+.pricebuttonbuild {
+  height: 40%;
+  font-size: 17px;
+  color: var(--color-price);
+}
+
+.name {
+  width: 60%;
+  height: 60%;
+  font-size: 32px;
+}
+
+.havebuttonbuild {
+  height: 100%;
+  width: 20%;
+  font-size: 45px;
+}
+
+#onesec {
+  text-transform: none;
+  height: 5%;
+  font-size: 22px;
+  color: var(--text-dark);
+  background: var(--bdoftext);
+  background: var(--bdoftext);
+}
+
+#onesectext {
+  height: 5%;
+  font-size: 22px;
+  color: var(--text-dark);
+  background: var(--bdoftext);
+  background: var(--bdoftext);
+}
+
+#upgrades {
+  margin-top: 1%;
+  width: 100%;
+  height: 37%;
+  overflow-y: auto;
+}
+
+#derevofour {
+  width: 100%;
+  height: 27px;
+}
+
+#nameofupgrade1,
+#nameofupgrade,
+.priceofupgrade,
+.pricebuttonupgrade,
+#nameofupgrade2 {
+  float: left;
+  text-align: left;
+  margin: auto;
+}
+
+.priceofupgrade,
+.pricebuttonupgrade {
+  text-transform: none;
+  height: 50%;
+  font-size: 15px;
+  color: var(--color-price);
+}
+
+.priceofupgrade {
+  width: 21%;
+}
+
+#nameofupgrade1,
+#nameofupgrade,
+#nameofupgrade2 {
+  width: 80%;
+  height: 60%;
+  font-size: 20px;
+}
+
+#nameofupgrade2 {
+  font-size: 18px;
+}
+
+.havebuttonupgrade {
+  height: 100%;
+  width: 20%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.upgradesbutton {
+  width: 48%;
+  height: 17%;
+  float: left;
+  margin-left: 1%;
+  margin-top: 10px;
+  background-color: var(--upgrade-active);
+  color: var(--text-dark);
+  cursor: pointer;
+  border-radius: 10px;
+  border-color: var(--text-dark);
+  transition: all 0.2s ease-in-out;
+}
+
+.upgradesbutton:hover {
+  transform: scale(1.03);
+}
+
+.upgradesbutton:active {
+  transform: scale(0.98);
+}
+
+.upgradesbutton:disabled {
+  background-color: var(--bg-grey-light);
+  cursor: not-allowed;
+}
+
+#info {
+  margin-top: 3%;
+  margin-bottom: 2%;
+  height: 6%;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border: thin solid var(--text-dark);
+}
+
+#nameinfo,
+#nameinfo1 {
+  height: 50%;
+  width: 50%;
+  text-align: center;
+  float: left;
+  background: var(--bdoftext);
+  color: var(--text-dark);
+}
+
+#priceinfo,
+#priceinfo1 {
+  color: var(--color-price);
+  font-size: 16px;
+}
+
+#information {
+  color: var(--text-dark);
+  font-size: 35px;
+  text-align: center;
+  background: var(--bdoftext);
+}
+
+#nameinfo,
+#nameinfo1 {
+  font-size: 18px;
+}
+
+#achievements {
+  overflow-y: auto;
+  height: 45%;
+  width: 93%;
+  margin-left: 2%;
+  margin-right: 5%;
+  border-radius: 20px;
+  background-color: var(--bdoftext);
+}
+
+.miniachievements {
+  margin-top: 10px;
+  float: left;
+  height: 45px;
+  width: 45px;
+  margin-left: 12px;
+  border-radius: 10px;
+  background: url("images/achievement.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+#notification {
+  color: var(--text-dark);
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 80%;
+  height: 12%;
+  border-radius: 10px;
+}
+
+#imgnotification,
+#textnotification,
+#desribenotification {
+  float: left;
+  margin: 0 auto;
+  font-size: 17px;
+}
+
+#imgnotification {
+  height: 65%;
+  width: 20%;
+}
+
+#textnotification {
+  font-size: 24px;
+  height: 35%;
+  width: 100%;
+  border-bottom: thin solid var(--text-dark);
+}
+
+#notification img {
+  height: 70px;
+  width: 70px;
+}
+
+#desribenotification {
+  height: 65%;
+  width: 80%;
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+.miniachievements:hover {
+  transform: scale(1.4);
+  opacity: 1;
+}
+
+#notification:hover {
+  transform: scale(1.05);
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: var(--bg);
+  z-index: 1001;
+}
+
+.preloader__image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+#countofcoins {
+  text-transform: none;
+}
+
+#topbar {
+  text-transform: none;
+  height: 3%;
+  width: 100%;
+  color: #ccc;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#ChangeThemes,
+#Language,
+#ResetGame,
+#ResetAch {
+  font-size: 15px;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0);
+  transition: all 0.2s ease-in-out;
+  border: none;
+  border-radius: 10px;
+}
+
+#ChangeThemes:hover {
+  color: #ffe4c4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ChangeThemes:active {
+  color: #ccc;
+}
+
+#ResetAch:hover {
+  color: #ffe4c4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ResetAch:active {
+  color: #ccc;
+}
+
+#Language:hover {
+  color: #ffe4c4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#Language:active {
+  color: #ccc;
+}
+
+#ResetGame:hover {
+  color: #ffe4c4;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ResetGame:active {
+  color: #ccc;
+}
+
+.progressbar {
+  border-radius: 10px;
+  height: 25%;
+  width: 80%;
+  margin-left: 10%;
+  position: relative;
+  border: thin solid;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.progressbar > span {
+  display: block;
+  height: 100%;
+  background-color: var(--color-price);
+  background-image: linear-gradient(
+    center bottom,
+    var(--color-price) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.progressbar > span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+#buttonPrestige:disabled {
+  cursor: not-allowed;
+}
+
+#nameofgame {
+  font-size: 20px;
+  color: #ccc;
+}
+
+#nameofgame:hover {
+  color: #ffe4c4;
+}
+
+#achievement64 {
+  margin-bottom: 15px;
+}
+
+#howmuchbuy {
+  height: 7%;
+  background-color: var(--bdoftext);
+  color: var(--text-dark);
+}
+
+.buythingselected {
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: transparent;
+  color: var(--color-price);
+}
+
+.buythingnotselected {
+  height: 60px;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background: transparent;
+  color: var(--text-dark);
+}
+
+#buy1thing:hover {
+  text-shadow: 0px 1px 0px #000, 0px 0px 1px #615f5c, 0px 0px 4px #615f5c;
+  color: white;
+}
+
+#buy10thing:hover {
+  text-shadow: 0px 1px 0px #000, 0px 0px 1px #615f5c, 0px 0px 4px #615f5c;
+  color: white;
+}
+
+#buy100thing:hover {
+  text-shadow: 0px 1px 0px #000, 0px 0px 1px #615f5c, 0px 0px 4px #615f5c;
+  color: white;
+}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Coin clicker</title>
+    <link type="image/png" sizes="120x120" rel="icon" href="images/icon.png" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="main.css"
+    />
+  </head>
+
+  <body class>
+    <div class="preloader">
+      <svg
+        class="preloader__image"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+        ></path>
+      </svg>
+    </div>
+    <div id="topbar">
+      <span id="nameofgame">Coin Clicker</span>
+      <button id="ResetGame">Сбросить прогресс</button>
+      <button id="ResetAch">Сбросить достижения</button>
+      <button id="ChangeThemes">Сменить тему</button>
+    </div>
+    <div class="page-wrapper">
+      <!-- левыый блок -->
+      <div class="left-panel-wrapper">
+        <!-- <img id="derevotwo" src="images/derevo1.jpg" /> -->
+        <div id="left-panel">
+          <div id="upgradesname">Улучшения</div>
+          <div id="upgrades">
+            <button id="upgrade1" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade1">+1 за тап</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade1" class="pricebuttonupgrade">300</div>
+              <div id="upgradehave1" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade2" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade2">Добытчик x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade2" class="pricebuttonupgrade">350</div>
+              <div id="upgradehave2" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade3" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Вагонетка x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade3" class="pricebuttonupgrade">1,000</div>
+              <div id="upgradehave3" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade4" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Машина x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade4" class="pricebuttonupgrade">12,000</div>
+              <div id="upgradehave4" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade5" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Шахта x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade5" class="pricebuttonupgrade">120,000</div>
+              <div id="upgradehave5" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade6" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Плавильня x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade6" class="pricebuttonupgrade">
+                1,200,000
+              </div>
+              <div id="upgradehave6" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade7" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Завод x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade7" class="pricebuttonupgrade">
+                10,000,000
+              </div>
+              <div id="upgradehave7" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade8" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Крипта x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade8" class="pricebuttonupgrade">
+                200,000,000
+              </div>
+              <div id="upgradehave8" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade9" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Банк x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade9" class="pricebuttonupgrade">
+                3,300,000,000
+              </div>
+              <div id="upgradehave9" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade10" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Биржа x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade10" class="pricebuttonupgrade">
+              </div>
+              <div id="upgradehave10" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade11" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Лепрекон x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade11" class="pricebuttonupgrade">
+              </div>
+              <div id="upgradehave11" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade12" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade">Портал x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade12" class="pricebuttonupgrade"></div>
+              <div id="upgradehave12" class="havebuttonupgrade"></div>
+            </button>
+
+            <button id="upgrade13" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade2">Машина времени x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade13" class="pricebuttonupgrade"></div>
+              <div id="upgradehave13" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade14" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade2">Генератор удачи x2</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade14" class="pricebuttonupgrade"></div>
+              <div id="upgradehave14" class="havebuttonupgrade"></div>
+            </button>
+            <button id="upgrade15" disabled="disabled" class="upgradesbutton">
+              <div id="nameofupgrade2">Скидка -10%</div>
+              <div class="priceofupgrade">Цена:</div>
+              <div id="priceofupgrade15" class="pricebuttonupgrade"></div>
+              <div id="upgradehave15" class="havebuttonupgrade"></div>
+            </button>
+          </div>
+          <div id="derevofour">
+            <img id="derevofour" src="images/derevo1.jpg" />
+          </div>
+          <div id="achievementname" ;>Достижения</div>
+          <div id="achievements">
+            <div id="achievement1" class="miniachievements" title="???"></div>
+            <div id="achievement2" class="miniachievements" title="???"></div>
+            <div id="achievement3" class="miniachievements" title="???"></div>
+            <div id="achievement4" class="miniachievements" title="???"></div>
+            <div id="achievement5" class="miniachievements" title="???"></div>
+            <div id="achievement6" class="miniachievements" title="???"></div>
+            <div id="achievement7" class="miniachievements" title="???"></div>
+            <div id="achievement8" class="miniachievements" title="???"></div>
+            <div id="achievement9" class="miniachievements" title="???"></div>
+            <div id="achievement10" class="miniachievements" title="???"></div>
+            <div id="achievement11" class="miniachievements" title="???"></div>
+            <div id="achievement12" class="miniachievements" title="???"></div>
+            <div id="achievement13" class="miniachievements" title="???"></div>
+            <div id="achievement14" class="miniachievements" title="???"></div>
+            <div id="achievement15" class="miniachievements" title="???"></div>
+            <div id="achievement16" class="miniachievements" title="???"></div>
+            <div id="achievement17" class="miniachievements" title="???"></div>
+            <div id="achievement18" class="miniachievements" title="???"></div>
+            <div id="achievement19" class="miniachievements" title="???"></div>
+            <div id="achievement20" class="miniachievements" title="???"></div>
+            <div id="achievement21" class="miniachievements" title="???"></div>
+            <div id="achievement22" class="miniachievements" title="???"></div>
+            <div id="achievement23" class="miniachievements" title="???"></div>
+            <div id="achievement24" class="miniachievements" title="???"></div>
+            <div id="achievement25" class="miniachievements" title="???"></div>
+            <div id="achievement26" class="miniachievements" title="???"></div>
+            <div id="achievement27" class="miniachievements" title="???"></div>
+            <div id="achievement28" class="miniachievements" title="???"></div>
+            <div id="achievement29" class="miniachievements" title="???"></div>
+            <div id="achievement30" class="miniachievements" title="???"></div>
+            <div id="achievement31" class="miniachievements" title="???"></div>
+            <div id="achievement32" class="miniachievements" title="???"></div>
+            <div id="achievement33" class="miniachievements" title="???"></div>
+            <div id="achievement34" class="miniachievements" title="???"></div>
+            <div id="achievement35" class="miniachievements" title="???"></div>
+            <div id="achievement36" class="miniachievements" title="???"></div>
+            <div id="achievement37" class="miniachievements" title="???"></div>
+            <div id="achievement38" class="miniachievements" title="???"></div>
+            <div id="achievement39" class="miniachievements" title="???"></div>
+            <div id="achievement40" class="miniachievements" title="???"></div>
+            <div id="achievement41" class="miniachievements" title="???"></div>
+            <div id="achievement42" class="miniachievements" title="???"></div>
+            <div id="achievement43" class="miniachievements" title="???"></div>
+            <div id="achievement44" class="miniachievements" title="???"></div>
+            <div id="achievement45" class="miniachievements" title="???"></div>
+            <div id="achievement46" class="miniachievements" title="???"></div>
+            <div id="achievement47" class="miniachievements" title="???"></div>
+            <div id="achievement48" class="miniachievements" title="???"></div>
+            <div id="achievement49" class="miniachievements" title="???"></div>
+            <div id="achievement50" class="miniachievements" title="???"></div>
+            <div id="achievement51" class="miniachievements" title="???"></div>
+            <div id="achievement52" class="miniachievements" title="???"></div>
+            <div id="achievement53" class="miniachievements" title="???"></div>
+            <div id="achievement54" class="miniachievements" title="???"></div>
+            <div id="achievement55" class="miniachievements" title="???"></div>
+            <div id="achievement56" class="miniachievements" title="???"></div>
+            <div id="achievement57" class="miniachievements" title="???"></div>
+            <div id="achievement58" class="miniachievements" title="???"></div>
+            <div id="achievement59" class="miniachievements" title="???"></div>
+            <div id="achievement60" class="miniachievements" title="???"></div>
+            <div id="achievement61" class="miniachievements" title="???"></div>
+            <div id="achievement62" class="miniachievements" title="???"></div>
+            <div id="achievement63" class="miniachievements" title="???"></div>
+            <div id="achievement64" class="miniachievements" title="???"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- разделение -->
+      <div class="firststolb">
+        <img class="derevo" src="images/derevo.jpg" />
+      </div>
+
+      <!-- средний блок -->
+      <div class="content-wrapper">
+        <div id="btn-group">
+          <button id="buttonPrestige" disabled="disabled">
+            Престиж 0 уровня
+            <div class="progressbar">
+              <span id="progresspercent" style="width: 0%"></span>
+            </div>
+          </button>
+        </div>
+        <div id="content">
+          <div id="kowelek">Монет</div>
+          <div id="countofcoins">0</div>
+          <div id="onesectext">В секунду</div>
+          <div id="onesec"></div>
+          <div class="unselectable" id="coin"></div>
+        </div>
+        <div id="notification">
+        </div>
+      </div>
+
+      <!-- разделение -->
+      <div class="firststolb">
+        <img class="derevo" src="images/derevo.jpg" />
+      </div>
+
+      <!-- правый блок -->
+      <div class="right-panel-wrapper">
+        <div id="rightpanel" class="right-panel">
+          <div id="shop">Магазин</div>
+          <div id="info">
+            <div id="information">Кликай и покупай</div>
+          </div>
+          <div id="howmuchbuy">
+            <span id="textbuy">Buy</span>
+            <button class="buythingselected" id="buy1thing" onclick="thing1()">
+              1
+            </button>
+            <button
+              class="buythingnotselected"
+              id="buy10thing"
+              onclick="thing10()"
+            >
+              10
+            </button>
+            <button
+              class="buythingnotselected"
+              id="buy100thing"
+              onclick="thing100()"
+            >
+              100
+            </button>
+          </div>
+          <div id="buttonsbuy">
+            <button id="buy1" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/zolotodobidchik.png" /></div>
+              <div class="name">Добытчик</div>
+              <div class="price">Цена:</div>
+              <div id="price1" class="pricebuttonbuild">15</div>
+              <div id="have1" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy2" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/vagonetka.png" /></div>
+              <div class="name">Вагонетка</div>
+              <div class="price">Цена:</div>
+              <div id="price2" class="pricebuttonbuild">100</div>
+              <div id="have2" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy3" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/samosval.png" /></div>
+              <div class="name">Машина</div>
+              <div class="price">Цена:</div>
+              <div id="price3" class="pricebuttonbuild">1,200</div>
+              <div id="have3" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy4" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/miner.png" /></div>
+              <div class="name">Шахта</div>
+              <div class="price">Цена:</div>
+              <div id="price4" class="pricebuttonbuild">12,000</div>
+              <div id="have4" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy5" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/kotel.png" /></div>
+              <div class="name">Плавильня</div>
+              <div class="price">Цена:</div>
+              <div id="price5" class="pricebuttonbuild">100,000</div>
+              <div id="have5" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy6" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/zavod.png" /></div>
+              <div class="name">Завод</div>
+              <div class="price">Цена:</div>
+              <div id="price6" class="pricebuttonbuild">1M</div>
+              <div id="have6" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy7" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/crypto.png" /></div>
+              <div class="name">Крипта</div>
+              <div class="price">Цена:</div>
+              <div id="price7" class="pricebuttonbuild">20M</div>
+              <div id="have7" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy8" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/bank.png" /></div>
+              <div class="name">Банк</div>
+              <div class="price">Цена:</div>
+              <div id="price8" class="pricebuttonbuild">330M</div>
+              <div id="have8" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy9" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/worldbank.png" /></div>
+              <div class="name">Биржа</div>
+              <div class="price">Цена:</div>
+              <div id="price9" class="pricebuttonbuild">5.1B</div>
+              <div id="have9" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy10" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/leprekon.png" /></div>
+              <div class="name">Лепрекон</div>
+              <div class="price">Цена:</div>
+              <div id="price10" class="pricebuttonbuild">75B</div>
+              <div id="have10" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy11" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/portal.png" /></div>
+              <div class="name">Портал</div>
+              <div class="price">Цена:</div>
+              <div id="price11" class="pricebuttonbuild">1t</div>
+              <div id="have11" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy12" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/timemachine.png" /></div>
+              <div class="name">Машина времени</div>
+              <div class="price">Цена:</div>
+              <div id="price12" class="pricebuttonbuild">14t</div>
+              <div id="have12" class="havebuttonbuild"></div>
+            </button>
+            <button id="buy13" disabled="disabled" class="buttonbuy">
+              <div class="imgfirst"><img src="images/luckychance.png" /></div>
+              <div class="name">Генератор удачи</div>
+              <div class="price">Цена:</div>
+              <div id="price13" class="pricebuttonbuild">170t</div>
+              <div id="have13" class="havebuttonbuild">0</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js" async defer></script>
+  </body>
+</html>

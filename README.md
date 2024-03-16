@@ -7,3 +7,23 @@
 
 ## There are many nuances in the project that can be corrected, but I'm too lazy ;D.
 ## Since the project is quite old, it’s easier to write a new one.
+
+### In project were using:
+1) Functions
+2) If/Else
+3) Methods of window
+4) Local Storage (save and get data)
+5) Json
+6) DOM Elements
+7) Loops
+8) OnMouseOver
+
+### Implemented in the project:
+1) Resets buttons
+2) Auto save
+3) Buttons to change themes(light, dark)
+4) Numbers in random position with opacity effect on coin button(to show how much you passsivly get in minute)
+5) Play audio when you click on buy/upgrade/coin button
+6) Achievements and interval to check if you get it
+7) Hints when hovering over purchases(created by OnMouse)
+

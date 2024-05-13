@@ -5,7 +5,7 @@
 
 ### The project was created solely for a complete understanding of how functions, methods, styles, and variables work.
 
-## There are many nuances in the project that can be corrected, but I'm too lazy ;D.
+## There are many nuances in the project that can be corrected, but I'm too lazy for it (better to write a new project) ;D.
 ## Since the project is quite old, it’s easier to write a new one.
 
 ### In project were using:

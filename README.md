@@ -1,5 +1,7 @@
 ## Coin clicker game is a regular clicker where you need to press a button, earn money, buy upgrades and new methods to get money.
 
+## To visit click here: https://coin-clicker-game-vanilla-js.vercel.app/ (ITS NOT ADAPTIVE TO SCREEN, WORKING GOOD ON 1920x1080)
+
 ### One of the very first JavaScript projects, which was written in 2022.
 ### The project uses many popular functions and methods of vanilla JavaScript.
 
